@@ -1,0 +1,64 @@
+HTML
+//Estructura
+//Con ! + tab se inica una plantilla predeterminada
+//Dentro de <body> , la estructura es :
+<header>
+</header>
+<main>
+</main>
+<footer>
+</footer>
+//existen <section> (secciones) que pueden estar dentro o fuera de estos campos, sirven para agrupar informacion del codigo 
+
+//Navegacion
+<nav> : se usa para la barra de navegacion
+
+//Imagenes
+//Utilice tablericon.com para copiar la imagenes en svg 
+
+//Formularios
+<form> : para formularios
+<fieldset> : para agregar el formato de formulario
+<legend> : va adentro de los formaluario, es el titulo del formaluarios
+<label> : para agregar una etiqueta
+<input> : crea el cuadro donde se ingresa la informacio , tiene diferentes etiquetas como type="text" y placeholder="tu nombre"
+<textarea> : es un tipo de cuadro que se puede ajustar a cualquier tamaño
+
+//Comentarios: <!-- -->
+
+
+
+CSS
+//unidades de medidas:
+//pixeles: pxl
+//reum: rem (cuando se usa se multiplica por el padre, se usa para dispositivos con una densidad de pieles muy alta)
+//Especificidad:
+//si un elemento tiene un selector mas especifico no importa mucho donde haya sido declarado, css decidira por si especificidad
+//!important: este codigo permite elegir el elemento mas importante
+//Pseudo Selectores (custom properties): 
+//:Nombre : sirve para definir elementos que no esten en el html
+//distribucion:
+//para alinear horizaontalmente: justify-content: center;
+//para alienear verticalmente: align-item; center;
+
+
+
+
+@media:
+//Para crear un snippet:
+//css.json
+"Crear un Media Querie": {
+		"prefix": "mq",
+		"body": "@media (min-width: $1) {\n    $2\n}"
+	}
+}
+//Estándares:
+//480px: celulares
+//768px: tablets
+//1140px: laptop y computadora
+//1400px: computadora
+
+
+//Grid (display: grid) :
+//Crear Columnas (ejemplo 3 columnas):
+//grid-template-column: 33.3% 33.3% 33.3% = 1fr 1fr 1fr = repeat(3, 1fr) 

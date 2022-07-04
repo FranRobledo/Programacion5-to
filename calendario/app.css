@@ -1,0 +1,365 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Paleta de Colores */
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+    --grisClaro: #dfe9f3;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+/* Scroll Snap*/
+.servicios, .navegacion-principal, .formulario, .footer{
+    scroll-snap-align: center;
+    scroll-snap-type: always;
+}
+
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+}
+h3 {
+    text-align: center;
+    font-size: medium;
+}
+
+.titulo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.51);
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.51);
+    background-color: var(--blanco);
+    border-radius: 1rem;
+    column-gap: 1rem;
+}
+
+.contenedor{
+    max-width: 100rem;
+    /*margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;*/
+    margin: 0 auto 0 auto;
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    text-decoration: none; /**Elimina el subrrallado del link**/
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem; /**Tamaño de la letra **/
+    text-transform: uppercase; /**Transforma el texto en mayusculas**/
+    font-weight: bold;  /**Ancho de la letra**/
+    border-radius: .5rem; /**Para que el borde sea redondeado**/
+    border: none;/*le quita el borde ´rederterminado*/
+}
+
+.boton :hover{
+    cursor: pointer;
+}
+
+/**Agranda el boton "contactar"**/
+@media (max-width: 760px) {
+    .boton{
+        width: 90%;
+        text-align: center;
+    }
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+    .navegacion-principal{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+.hero {
+    background-image: url(https://images.pexels.com/photos/3183165/pexels-photo-3183165.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgb( 0 0 0 / 45%);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+
+.contenido-hero h2{
+    margin-bottom: 4rem;
+}
+
+.contenido-hero span{
+    font-size: small;
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
+@media (max-width: 1020px) {
+    .sombra{
+        width: 97%;
+    }
+}
+
+/** Servicios **/
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1rem 2rem;
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3{
+    color: var(--secundario);
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.servicio p{
+    line-height: 2; /** Interlineado **/
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.servicio .icono{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*Contacto*/
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%); /*Utiliza el valor mas pequeño*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+    .formulario{
+        width: 95%;
+    }
+}
+
+.formulario fieldset{
+    border: none
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--primario);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+
+    .campos:nth-child(3), .campos:nth-child(4) {
+        grid-column: 1/3;
+    }
+    
+}
+
+.campos {
+    margin-bottom: 1rem;
+
+}
+
+.campos label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.campos textarea{
+    width: 20rem;
+}
+
+.enviar .boton{
+    width: 100%;
+}
+
+/*Footer*/
+
+.footer {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.contactos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, auto);
+    margin-left: 20%;
+    margin-right: 20%;
+    row-gap: 4rem;
+    column-gap: 2rem;
+}
+
+.diseñadorweb {
+    font-size: 5rem;
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.basededatos {
+    font-size: 5rem;
+    grid-column: 1/3;
+    grid-row: 5/6;
+}
+
+.contactos__flex {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.contactos__perfil {
+    width: auto;
+    margin: auto auto;
+    border-radius: 50%;
+}
+
+.contactos__fran {
+    font-size: 2rem;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.contactos__fran__imagen {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.contactos__lucho {
+    font-size: 2rem;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.contatos__lucho__imagen {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.contactos__capi {
+    font-size: 2rem;
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.contactos__capi__imagen {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.contactos__enriz {
+    font-size: 2rem;
+    grid-column: 1/2;
+    grid-row: 6/7;
+}
+
+.contactos__enriz__imagen {
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
