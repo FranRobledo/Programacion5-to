@@ -61,6 +61,7 @@ h3 {
     background-color: var(--blanco);
     border-radius: 1rem;
     column-gap: 1rem;
+    padding-bottom: 2rem;
 }
 
 .contenedor{
@@ -272,7 +273,7 @@ h3 {
 }
 
 .campos textarea{
-    width: 20rem;
+    width: 40rem;
 }
 
 .enviar .boton{
