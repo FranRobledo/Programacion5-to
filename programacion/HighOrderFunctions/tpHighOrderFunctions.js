@@ -1,3 +1,5 @@
+// Grupo: Robledo y Fernandez
+
 //   Feliz Primavera ! 
 
 //   TP: Funciones de orden superior en JavaScript - 09/09/2022
@@ -44,6 +46,10 @@ console.log(mapeo)
 // 5) Venta al por mayor. Calcular el total de todos los precios o "price" multiplicados por 5.
 
 
+const reducir = setUps.reduce ((contador, setup) => {
+    return contador + setup.price * 5
+    }, 0);
+console.log("Total de todos los precios: ", reducir);
 
 // 6) Encontrar el setUp cuya "gpu" sea "Radeon RX 6600".
 
@@ -68,3 +74,7 @@ console.log(mapeo2)
 
 // 8) Filtrar los nuevos setUps del punto 7 cuyo precio sea mayor que 1500 y restar en 2 unidades el stock del setUp cuya gpu sea "RTX 3070 Ti".
 
+var filtrado2 = mapeo2.filter ((setup) => setup.price > 1500)
+var restock = filtrado2.find((setup) => setup.gpu === "RTX 3070 Ti")
+restock.stock = restock.stock - 2;
+console.log(filtrado2)

@@ -6,6 +6,20 @@ const setUps = [
     {processor: "i9 12900", ram: "Fury 8GB", gpu: "RTX 2060", storage: 4, storageType: "HDD", monitor: 60, price: 999},
     {processor: "ryzen 5 5600X", ram: "HyperX 8GB", gpu: "Radeon PRO W6400", storage: 4, storageType: "HDD", monitor: 60, price: 949}
 ];
-var multi = setUps.reduce ((acumulador, setup) => {
-    return acumulador + setup.price * 5, 0})
-console.log(multi)
+var mapeo2 = setUps.map((setup) => {
+    return{
+        processor: setup.processor,
+        ram: setup.ram,
+        gpu: setup.gpu,
+        storage: setup.storage,
+        storageType: setup.storageType,
+        monitor: setup.monitor,
+        price: setup.price,
+        stock: 10,
+    }
+}) 
+
+const reducir = setUps.reduce ((contador, setup) => {
+    return contador + setup.price * 5
+    }, 0);
+console.log("Total de todos los precios: ", reducir);
